@@ -24,7 +24,7 @@ public class Exercise1 {
 	
 	private void exercise1Runner_1_Random() {
 	
-		long  observationCount = 10000;
+		long  observationCount = 1000000;
 		IntegerTreeNode root = new IntegerTreeNode();
 		Random r = new Random(observationCount);
 		int lookFor = 0;
