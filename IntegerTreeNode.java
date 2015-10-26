@@ -55,6 +55,15 @@ public class IntegerTreeNode {
             }
         }
     }
+	public int depth() {
+		
+			return Math.max((leftNode == null ? 0 : 1 + leftNode.depth()) , (rightNode == null ? 0 : 1 + rightNode.depth()));		
+	}
+	
+	public void remove(int n) {
+		
+	}
+	
 	
 	public int searchFor(int n) {
         
