@@ -3,10 +3,9 @@ public class IntegerTreeNode {
     private int value;
     private IntegerTreeNode leftNode;
     private IntegerTreeNode rightNode;
-	private StringBuilder sb;
 	//
-	private final String EMPTY_BRACKETS = "%s[]";
 	private final String BRACKETS = "[%s L%s R%s]";
+	private final String SIMPLE_BRACKETS = "[%s%s%s]";
 	
 
     public IntegerTreeNode(int value) {
@@ -94,22 +93,17 @@ public class IntegerTreeNode {
 		}	
 	}
 	
-	public String toString() {
+	public String _toString() {
 	
-		sb = new StringBuilder();
-		//sb.append(value==0 ? String.format(BRACKETS,"","") : String.format(BRACKETS,"",value))
-		//	.append(leftNode == null ? String.format(BRACKETS,"L","") : String.format(BRACKETS,"L",leftNode) )
-		//	.append(rightNode == null ? String.format(BRACKETS,"R","") : String.format(BRACKETS,"R",rightNode) );
 		return String.format(BRACKETS, Integer.toString(value)
 			, (leftNode == null ? "[]" : leftNode)
 			, (rightNode == null ? "[]" : rightNode));
-//		String valueAsString = Integer.toString(value);
-//		String nodeValues = (leftNode == null ? String.format(BRACKETS,"L","") : String.format(BRACKETS,"L",leftNode))
-//			+ (rightNode == null ? String.format(BRACKETS,"R","") : String.format(BRACKETS,"R",rightNode));
-//		return String.format(String.format(BRACKETS,valueAsString,nodeValues));
-//		sb.append(value==0 ? String.format(BRACKETS,"","") : String.format(BRACKETS,"",value));
-//			.append(leftNode == null ? String.format(BRACKETS,"L","") : String.format(BRACKETS,"L",leftNode) )
-//			.append(rightNode == null ? String.format(BRACKETS,"R","") : String.format(BRACKETS,"R",rightNode) );
-//		return sb.toString();
+	}
+	
+	public String toString() {
+	
+		return String.format(SIMPLE_BRACKETS,  Integer.toString(value) + (leftNode == null && rightNode== null ? "" : " ")
+			, (leftNode == null ? "" : leftNode)
+			, (rightNode == null ? "" : rightNode));
 	}
 }

@@ -5,7 +5,7 @@ public class Exercise1 {
 
 	public static void main(String[] args) {
 		
-//		new Exercise1().exercise1Runner_1();
+		new Exercise1().exercise1Runner_1();
 		new Exercise1().exercise1Runner_1_Random();
 	
 	}
@@ -39,6 +39,5 @@ public class Exercise1 {
 		
 		System.out.println("Tree " + (root.contains(lookFor-1) ? "CONTAINS " : "DOES NOT contain ") + (lookFor-1) );
 		System.out.println("Search for " +  (lookFor-1) + " took " + root.searchFor(lookFor-1) + " iterations" );		
-		System.out.println(root);
 	}
 }
